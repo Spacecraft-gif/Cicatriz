@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COSMIC_PROTOCOL // HBD_SHYAM</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #030308;
+            color: #00ffcc;
+            font-family: 'Courier New', Courier, monospace;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            overflow-x: hidden;
+            padding: 20px;
+        }
+        .stars-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 50% 50%, rgba(15, 5, 30, 0.9), rgba(3, 3, 8, 0.95));
+            z-index: -2;
+        }
+        .container {
+            text-align: center;
+            max-width: 600px;
+            width: 100%;
+            border: 1px dashed rgba(0, 255, 204, 0.4);
+            padding: 30px 20px;
+            background: rgba(3, 3, 12, 0.75);
+            box-shadow: 0 0 25px rgba(0, 255, 204, 0.15);
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        h1 {
+            font-size: 1.6rem;
+            margin-bottom: 15px;
+            text-shadow: 0 0 10px rgba(0, 255, 204, 0.6);
+            letter-spacing: 2px;
+        }
+        .cake-box {
+            font-size: 3.5rem;
+            margin: 15px 0;
+            animation: float 3s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        p {
+            font-size: 0.9rem;
+            line-height: 1.6;
+            color: #a0ffef;
+            margin-bottom: 20px;
+        }
+        .question-box {
+            background: rgba(0, 255, 204, 0.05);
+            border: 1px solid rgba(0, 255, 204, 0.2);
+            padding: 15px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+        }
+        .question-title {
+            font-size: 1rem;
+            color: #ff007f;
+            margin-bottom: 10px;
+            text-shadow: 0 0 8px rgba(255, 0, 127, 0.5);
+        }
+        .btn-group {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 10px;
+        }
+        .btn {
+            background: transparent;
+            color: #00ffcc;
+            border: 2px solid #00ffcc;
+            padding: 10px 20px;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 10px rgba(0, 255, 204, 0.2);
+            border-radius: 4px;
+        }
+        .btn:hover {
+            background: #00ffcc;
+            color: #030308;
+            box-shadow: 0 0 20px rgba(0, 255, 204, 0.8);
+        }
+        .hidden-msg {
+            display: none;
+            margin-top: 15px;
+            font-size: 1rem;
+            color: #ff007f;
+            text-shadow: 0 0 10px rgba(255, 0, 127, 0.6);
+        }
+    </style>
+</head>
+<body>
+    <div class="stars-bg"></div>
+    
+    <div class="container">
+        <h1>// SYSTEM_INIT: HBD_SHYAM</h1>
+        <div class="cake-box">🎂🚀</div>
+        <p>Target coordinates locked across the universe. Transmitting high-velocity stellar energy, cake protocols, and absolute best wishes for your journey ahead!</p>
+        
+        <div class="question-box">
+            <div class="question-title">QUERY: Are you ready to launch into another stellar year?</div>
+            <div class="btn-group">
+                <button class="btn" onclick="answerYes()">AFFIRMATIVE</button>
+                <button class="btn" onclick="answerNo()">STANDBY</button>
+            </div>
+            <div id="q-response" class="hidden-msg"></div>
+        </div>
+
+        <button class="btn" onclick="revealMessage()">EXECUTE_FINAL_WISH.EXE</button>
+        <div id="secret" class="hidden-msg">✨ Happy Birthday to an amazing aspirant of the beautiful planet earth! May your trajectory scale the stars! ✨</div>
+    </div>
+
+    <script>
+        function answerYes() {
+            const res = document.getElementById('q-response');
+            res.style.display = 'block';
+            res.style.color = '#00ffcc';
+            res.innerText = '>> SUCCESS: Thrusters engaged at maximum velocity!';
+        }
+
+        function answerNo() {
+            const res = document.getElementById('q-response');
+            res.style.display = 'block';
+            res.style.color = '#ff007f';
+            res.innerText = '>> WARNING: No choice, launch is mandatory! Happy Birthday anyway! 🚀';
+        }
+
+        function revealMessage() {
+            document.getElementById('secret').style.display = 'block';
+        }
+    </script>
+</body>
+  </html>
